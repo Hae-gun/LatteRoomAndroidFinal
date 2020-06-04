@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:addStatesFromChildren="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginRight="10pt">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="#80ffffff"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/mainTemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="25°C"
+                        android:textSize="15pt"
+                        android:gravity="right"
+                        />
+
+                    <TextView
+                        android:id="@+id/mainDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2020.05.13(화)"
+                        android:textSize="15pt"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:id="@+id/mainHumidity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="33%"
+                        android:textSize="15pt"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginRight="10pt"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#80ffffff"
+                    >
+
+                    <TextView
+                        android:id="@+id/AlarmActivity"
+                        android:layout_width="114dp"
+                        android:layout_height="15pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="AM 06:30"
+                        android:textSize="10pt" />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="15pt"
+                        android:id="@+id/AlarmSwitch"
+                        android:track="@drawable/switch_track_selector"
+                        android:thumb="@drawable/switch_thumb"
+                        android:layout_marginRight="5pt"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!--            온도thermo 조명light 습도 humidity-->
+
+            <ImageButton
+                android:id="@+id/main_thermo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_thermo" />
+
+            <ImageButton
+                android:id="@+id/main_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_light" />
+
+            <ImageButton
+                android:id="@+id/main_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_humidity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--            침대각도bed,소음확인noise,외출모드exit-->
+            <ImageButton
+                android:id="@+id/main_bed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_bed" />
+
+            <ImageButton
+                android:id="@+id/main_noise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_noise" />
+
+            <ImageButton
+                android:id="@+id/main_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imageselector" />
+            <ToggleButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textOn=""
+                android:textOff=""
+                android:layout_weight="1"
+                android:background="@drawable/icon_alarm_on"
+                android:id="@+id/toggleAlarm"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
